@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 변수(var, let) / 상수(const)
+      // 타입은 값을 담은 후 결정
+
+      // 변수
+      // var - 구버전, 재선언, 재할당 가능
+      // let - 새로 도입, 재할당 가능, 재선언 불가능, 주로 사용
+
+      // const 상수 = 초기화 필수, 재할당 재선언 불가
+
+      var value1 = 4;
+
+      value1 = 10; //재할당
+      console.log("value1 = ", value1);
+
+      var value1 = 50; //재선언
+      console.log("value1 = ", value1);
+
+      let value2 = 55;
+      console.log("value2 = ", value2);
+
+      value2 = 60; //재할당
+      console.log("value2 = ", value2);
+      //let value2 = 60; 오류
+
+      const value3 = 10;
+      // value3 = 15; //상수 재할당 불가 Assignment to constant
+      console.log("value3 = ", value3);
+    </script>
+  </body>
+</html>

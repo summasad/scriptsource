@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //연산자
+      //산술(+,-,*,/,%,++,--,**), 대입(=, 복합대입 +=,-=,*=)
+      // 비교(== 값, === 값과 타입, != 값, !== 값과 타입, <=, >=)
+      // 관계(||, &&, !)
+
+      let a = 4,
+        b = 5;
+      let c = "5";
+      console.log("a == b", a == b);
+      console.log("b == c", b == c); //true, 타입 달라도 값비교 가능
+      console.log("b == c", b === c); //false
+
+      console.log("b + c = ", b + c); //산술 연산 아닌 값 연결
+      // string + 숫자 :
+      // + : 연결, 나머지 기호는 연산 해줌
+      console.log("b * c = ", b * c); //산술 연산
+      console.log("b / c = ", b / c); //산술 연산
+      console.log("b % c = ", b % c); //산술 연산
+      console.log("b - c = ", b - c); //산술 연산
+    </script>
+  </body>
+</html>

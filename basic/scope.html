@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 변수 범위
+      // {}, for(){}
+      // block({}) scope : 블록 안에서만 사용 let, const
+      // function scope : 항상 기능 var
+
+      //block 안에 선언된 let 변수는 block 밖에서 사용 불가
+      //block 안에 선언된 var 변수는 block 밖에서 사용 가능!
+      {
+        let value1 = 10;
+        var value2 = 15;
+      }
+      console.log("value1 = ", value2);
+
+      function foobar() {
+        var foo = 5;
+        console.log("foo = ", +foo);
+      }
+      console.log("foo = ", +foo);
+    </script>
+  </body>
+</html>
