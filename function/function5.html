@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // q1) 두 개의 숫자를 받아서 빼는 결과를 리턴하는 함수 작성
+      //      function 키워드 사용
+      //const a = prompt("첫번째 숫자 입력");
+      //const b = prompt("두번째 숫자 입력");
+      function minus(a, b) {
+        return a - b;
+        // console.log(prompt("첫번째 숫자 입력") - prompt("두번째 숫자 입력"));
+      }
+      console.log(minus(5, 3));
+
+      // q2) q1에서 작성했던 함수를 함수 표현식으로 변경하기
+      const minus2 = function (a, b) {
+        return a - b;
+      };
+      console.log(minus2(5, 3));
+
+      // q3) q2에서 작성했던 함수를 화살표 함수로 변경하기
+      const minus3 = (a, b) => a - b;
+      console.log(minus3(5, 3));
+
+      // q4) 한개의 숫자를 인자로 받아 그 숫자가 3의 배수인지 확인하는 함수 작성
+      //     3의 배수라면 화면에 "박수"라는 글자 출력 / 아니라면 "통과" 출력
+      function multiply(i) {
+        if (i % 3 == 0) {
+          console.log("박수");
+        } else {
+          console.log("통과");
+        }
+      }
+      multiply(3);
+      multiply(4);
+
+      // q5) q4를 개선하여 3의 배수인 경우 박수, 9의 배수인 경우 박수x2, 나머지 "통과"
+      function multiply2(j) {
+        if (j % 3 == 0 && j % 9 !== 0) {
+          console.log("박수");
+        } else if (j % 9 == 0) {
+          console.log("박수 박수");
+        } else {
+          console.log("통과");
+        }
+      }
+
+      multiply2(3);
+      multiply2(9);
+      multiply2(11);
+
+      // q6) 시험 점수를 입력하면 결과를 알려주는 함수 작성
+      //      두 과목을 합해서 120점 이상이면 합격, 단 한 과목이 40점 미만이면 과락으로 불합격
+
+      function multiply3(c, d) {
+        if (c + d >= 120 && c > 40 && d > 40) {
+          console.log("합격");
+        } else {
+          console.log("불합격");
+        }
+      }
+
+      multiply3(50, 80);
+      multiply3(40, 90);
+
+      // q7) 3의 배수에서 박수를 치는게 아니라 끝자리가 3, 6, 9로 끝나는 숫자라면 "박수" 출력
+      function multiply4(e) {
+        if (e % 10 == 3 || e % 10 == 6 || e % 10 == 9) {
+          console.log("박수");
+        } else {
+          console.log("통과");
+        }
+      }
+      multiply4(8);
+      multiply4(19);
+    </script>
+  </body>
+</html>
