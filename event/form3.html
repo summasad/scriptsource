@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <input type="text" name="num1" id="num1" size="10" />
+      +
+      <input type="text" name="num2" id="num2" size="10" />
+      =
+      <input type="text" name="result" id="result" size="10" />
+      <button type="button">계산</button>
+    </form>
+    <form action="" method="get">
+      <input type="text" name="num3" id="num3" size="10" />
+      <select name="op" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="text" name="num4" id="num4" size="10" />
+      =
+      <input type="text" name="result" id="result" size="10" />
+      <button type="button">계산</button>
+    </form>
+    <script>
+      //num1 과 num2의 값을 입력한 후 계산 버튼 출력시 +한 결과를 result에 보여주기
+      document.querySelector("button").addEventListener("click", () => {
+        const num1 = Number(document.getElementById("num1").value);
+        const num2 = Number(document.getElementById("num2").value);
+        document.getElementById("result2").value = num1 + num2;
+      });
+
+      document
+        .querySelector("body form:nth-child(2) button")
+        .addEventListener("click", () => {
+          const num3 = Number(document.getElementById("num3").value);
+          const num4 = Number(document.getElementById("num4").value);
+          //op 요소 value
+          const op = document.getElementById("op").value;
+
+          let result = 0;
+          switch (op) {
+            case "+":
+              result = num3 + num4;
+              break;
+            case "-":
+              result = num3 - num4;
+              break;
+            case "*":
+              result = num3 * num4;
+              break;
+            case "/":
+              result = num3 / num4;
+              break;
+          }
+          document.getElementById("result2").value = result;
+        });
+    </script>
+  </body>
+</html>
